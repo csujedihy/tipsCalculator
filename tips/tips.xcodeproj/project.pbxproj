@@ -13,6 +13,7 @@
 		C15DAA041C32143100505115 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C15DAA031C32143100505115 /* Images.xcassets */; };
 		C15DAA071C32143100505115 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C15DAA051C32143100505115 /* LaunchScreen.xib */; };
 		C15DAA131C32143100505115 /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15DAA121C32143100505115 /* tipsTests.swift */; };
+		C18D2B6E1C360F0800D02A16 /* settingsViewCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18D2B6D1C360F0800D02A16 /* settingsViewCon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		C15DAA0C1C32143100505115 /* tipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15DAA111C32143100505115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C15DAA121C32143100505115 /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
+		C18D2B6D1C360F0800D02A16 /* settingsViewCon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewCon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		C15DA9F91C32143100505115 /* tips */ = {
 			isa = PBXGroup;
 			children = (
+				C18D2B6D1C360F0800D02A16 /* settingsViewCon.swift */,
 				C15DA9FC1C32143100505115 /* AppDelegate.swift */,
 				C15DA9FE1C32143100505115 /* ViewController.swift */,
 				C15DAA001C32143100505115 /* Main.storyboard */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C15DA9FF1C32143100505115 /* ViewController.swift in Sources */,
+				C18D2B6E1C360F0800D02A16 /* settingsViewCon.swift in Sources */,
 				C15DA9FD1C32143100505115 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +415,7 @@
 				C15DAA181C32143100505115 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C15DAA191C32143100505115 /* Build configuration list for PBXNativeTarget "tipsTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				C15DAA1B1C32143100505115 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

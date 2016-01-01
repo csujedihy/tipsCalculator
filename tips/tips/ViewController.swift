@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let defaults = NSUserDefaults.standardUserDefaults()
+        tipControl.selectedSegmentIndex = defaults.integerForKey("default_tip_rate")
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
     }
