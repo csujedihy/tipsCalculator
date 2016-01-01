@@ -13,6 +13,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var billFill: UITextField!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var tipTextLabel: UILabel!
+    @IBOutlet weak var totalTextLabel: UILabel!
+    @IBOutlet weak var billTextLabel: UILabel!
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if defaults.boolForKey("default_theme") == true {
+            self.view.backgroundColor = UIColor.darkGrayColor()
+            tipLabel.textColor = UIColor.whiteColor()
+            totalLabel.textColor = UIColor.whiteColor()
+            totalTextLabel.textColor = UIColor.whiteColor()
+            tipTextLabel.textColor = UIColor.whiteColor()
+            billTextLabel.textColor = UIColor.whiteColor()
+            
+        } else {
+            self.view.backgroundColor = UIColor.whiteColor()
+            tipLabel.textColor = UIColor.blackColor()
+            totalLabel.textColor = UIColor.blackColor()
+            totalTextLabel.textColor = UIColor.blackColor()
+            tipTextLabel.textColor = UIColor.blackColor()
+            billTextLabel.textColor = UIColor.blackColor()
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

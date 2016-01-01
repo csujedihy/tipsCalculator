@@ -9,8 +9,18 @@
 import UIKit
 
 class settingsViewCon: UIViewController {
+    @IBOutlet weak var tipLabel: UILabel!
 
+    @IBOutlet weak var themeLabel: UILabel!
     @IBOutlet weak var defaultTipCon: UISegmentedControl!
+    @IBOutlet weak var themeCon: UISwitch!
+    
+    @IBAction func onThemeChanged(sender: AnyObject) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(themeCon.on, forKey: "default_theme")
+        defaults.synchronize()
+        setDarkTheme()
+    }
     
     @IBAction func onValChanged(sender: AnyObject) {
         var defaultTip = defaultTipCon.selectedSegmentIndex
@@ -19,10 +29,31 @@ class settingsViewCon: UIViewController {
         defaults.synchronize()
     }
     
+    
+    func setDarkTheme() {
+        if themeCon.on == true {
+
+            self.view.backgroundColor = UIColor.darkGrayColor()
+            tipLabel.textColor = UIColor.whiteColor()
+            themeLabel.textColor = UIColor.whiteColor()
+        
+        }
+        else {
+            self.view.backgroundColor = UIColor.whiteColor()
+            tipLabel.textColor = UIColor.blackColor()
+            themeLabel.textColor = UIColor.blackColor()
+        }
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let defaults = NSUserDefaults.standardUserDefaults()
         defaultTipCon.selectedSegmentIndex = defaults.integerForKey("default_tip_rate")
+        themeCon.setOn(defaults.boolForKey("default_theme"), animated: false)
+        setDarkTheme()
+        
         // Do any additional setup after loading the view.
     }
 
