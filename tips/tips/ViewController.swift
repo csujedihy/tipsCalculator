@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        billFill.becomeFirstResponder()
         let defaults = NSUserDefaults.standardUserDefaults()
         if defaults.boolForKey("default_theme") == true {
             self.view.backgroundColor = UIColor.darkGrayColor()
