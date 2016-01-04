@@ -17,10 +17,40 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalTextLabel: UILabel!
     @IBOutlet weak var billTextLabel: UILabel!
     
+    func getCurrentSecs()->Int64{
+        return  Int64(NSDate().timeIntervalSince1970/60)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         billFill.becomeFirstResponder()
         let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if defaults.integerForKey("last_time") != 0 {
+            var lastTime = defaults.integerForKey("last_time")
+            var lastBill = defaults.doubleForKey("last_bill")
+            var nowTime = Int(getCurrentSecs())
+            if nowTime - lastTime < 10 {
+                
+                if lastBill != 0 {
+                    billFill.text = String(format: "%.2f", lastBill)
+                    calcTip()
+                }
+                else {
+                    billFill.text = ""
+                }
+                
+            } else {
+                billFill.text = ""
+            }
+            
+        }
+        
+        
         if defaults.boolForKey("default_theme") == true {
             self.view.backgroundColor = UIColor.darkGrayColor()
             tipLabel.textColor = UIColor.whiteColor()
@@ -40,6 +70,7 @@ class ViewController: UIViewController {
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -47,25 +78,32 @@ class ViewController: UIViewController {
         tipControl.selectedSegmentIndex = defaults.integerForKey("default_tip_rate")
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
-    @IBOutlet weak var tipControl: UISegmentedControl!
-    @IBAction func onEditingChanged(sender: AnyObject) {
+    func calcTip() {
         var tipPers = [0.18, 0.20, 0.22]
         var tipPer = tipPers[tipControl.selectedSegmentIndex]
-        
         var billAmount = (billFill.text as NSString).doubleValue
         var tip = billAmount * tipPer
         var total = billAmount + tip
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.billAmountLast = billAmount
+    }
+
+    
+    @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBAction func onEditingChanged(sender: AnyObject) {
         
-        
+        calcTip()
     }
     @IBAction func OnTap(sender: AnyObject) {
         view.endEditing(true)
