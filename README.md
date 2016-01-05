@@ -20,8 +20,8 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Dark Theme Mode!
-
+- [x] Dark Theme Mode
+- [x] Multi-languege support (Chinese & English)
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
