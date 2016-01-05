@@ -76,9 +76,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let defaults = NSUserDefaults.standardUserDefaults()
         tipControl.selectedSegmentIndex = defaults.integerForKey("default_tip_rate")
-        tipLabel.text = "$0.00"
-        totalLabel.text = "$0.00"
-        
+        var formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        tipLabel.text = formatter.stringFromNumber(0)
+        totalLabel.text = formatter.stringFromNumber(0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,8 +94,11 @@ class ViewController: UIViewController {
         var billAmount = (billFill.text as NSString).doubleValue
         var tip = billAmount * tipPer
         var total = billAmount + tip
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        var formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        
+        tipLabel.text = formatter.stringFromNumber(tip)
+        totalLabel.text = formatter.stringFromNumber(total)
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.billAmountLast = billAmount
     }
