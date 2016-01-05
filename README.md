@@ -20,7 +20,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Dark heme ode
+- [x] Dark theme ode
 - [x] Multi-languege support (Chinese & English)
 - [x] "Clear" button to reset bill amount
 
