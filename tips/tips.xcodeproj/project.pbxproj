@@ -16,6 +16,7 @@
 		C18D2B6E1C360F0800D02A16 /* settingsViewCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18D2B6D1C360F0800D02A16 /* settingsViewCon.swift */; };
 		C1F0C17E1C3B36A300FF739D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1F0C17D1C3B36A300FF739D /* InfoPlist.strings */; };
 		C1F0C1811C3B376000FF739D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1F0C1831C3B376000FF739D /* Localizable.strings */; };
+		C1F0C1941C3B49EF00FF739D /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0C1931C3B49EF00FF739D /* Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		C1F0C1901C3B3B5700FF739D /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/Main.strings"; sourceTree = "<group>"; };
 		C1F0C1911C3B3B5700FF739D /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		C1F0C1921C3B3B5700FF739D /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C1F0C1931C3B49EF00FF739D /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				C18D2B6D1C360F0800D02A16 /* settingsViewCon.swift */,
 				C15DA9FC1C32143100505115 /* AppDelegate.swift */,
 				C15DA9FE1C32143100505115 /* ViewController.swift */,
+				C1F0C1931C3B49EF00FF739D /* Util.swift */,
 				C15DAA001C32143100505115 /* Main.storyboard */,
 				C15DAA031C32143100505115 /* Images.xcassets */,
 				C15DAA051C32143100505115 /* LaunchScreen.xib */,
@@ -239,6 +242,7 @@
 				C15DA9FF1C32143100505115 /* ViewController.swift in Sources */,
 				C18D2B6E1C360F0800D02A16 /* settingsViewCon.swift in Sources */,
 				C15DA9FD1C32143100505115 /* AppDelegate.swift in Sources */,
+				C1F0C1941C3B49EF00FF739D /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

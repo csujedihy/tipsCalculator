@@ -47,10 +47,11 @@ class settingsViewCon: UIViewController {
     
     func setDarkTheme() {
         if themeCon.on == true {
-
-            self.view.backgroundColor = UIColor.darkGrayColor()
-            tipLabel.textColor = UIColor.whiteColor()
-            themeLabel.textColor = UIColor.whiteColor()
+            self.view.backgroundColor = UIColor(hex: "#262626")
+            var darkTextColor = UIColor(hex: "#E2E4E2")
+            self.view.backgroundColor = UIColor(hex: "#262626")
+            tipLabel.textColor = darkTextColor
+            themeLabel.textColor = darkTextColor
         
         }
         else {

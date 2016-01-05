@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var tipLabel: UILabel!
@@ -61,14 +62,15 @@ class ViewController: UIViewController {
             
         }
         
-        
+        // Theme Setup
         if defaults.boolForKey("default_theme") == true {
-            self.view.backgroundColor = UIColor.darkGrayColor()
-            tipLabel.textColor = UIColor.whiteColor()
-            totalLabel.textColor = UIColor.whiteColor()
-            totalTextLabel.textColor = UIColor.whiteColor()
-            tipTextLabel.textColor = UIColor.whiteColor()
-            billTextLabel.textColor = UIColor.whiteColor()
+            self.view.backgroundColor = UIColor(hex: "#262626")
+            var darkTextColor = UIColor(hex: "#E2E4E2")
+            tipLabel.textColor = darkTextColor
+            totalLabel.textColor = darkTextColor
+            totalTextLabel.textColor = darkTextColor
+            tipTextLabel.textColor = darkTextColor
+            billTextLabel.textColor = darkTextColor
             
         } else {
             self.view.backgroundColor = UIColor.whiteColor()
