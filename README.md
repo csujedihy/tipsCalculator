@@ -23,6 +23,7 @@ The following **additional** features are implemented:
 - [x] Dark heme ode
 - [x] Multi-languege support (Chinese & English)
 - [x] "Clear" button to reset bill amount
+
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
