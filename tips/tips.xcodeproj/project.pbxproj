@@ -41,6 +41,7 @@
 		C15DAA111C32143100505115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C15DAA121C32143100505115 /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
 		C18D2B6D1C360F0800D02A16 /* settingsViewCon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewCon.swift; sourceTree = "<group>"; };
+		C1D8DA7F1C3B519D00A14F9D /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		C1F0C17D1C3B36A300FF739D /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		C1F0C17F1C3B36C500FF739D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		C1F0C1801C3B36C500FF739D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 			children = (
 				C1F0C1831C3B376000FF739D /* Localizable.strings */,
 				C1F0C17D1C3B36A300FF739D /* InfoPlist.strings */,
+				C1D8DA7F1C3B519D00A14F9D /* MyPlayground.playground */,
 				C15DA9F91C32143100505115 /* tips */,
 				C15DAA0F1C32143100505115 /* tipsTests */,
 				C15DA9F81C32143100505115 /* Products */,
