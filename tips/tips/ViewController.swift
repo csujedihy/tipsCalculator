@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipTextLabel: UILabel!
     @IBOutlet weak var totalTextLabel: UILabel!
     @IBOutlet weak var billTextLabel: UILabel!
+    @IBOutlet weak var settingLabel: UIBarButtonItem!
     
     func getCurrentSecs()->Int64{
         return  Int64(NSDate().timeIntervalSince1970/60)
@@ -25,11 +26,21 @@ class ViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
     
+    func langSetup() {
+        tipTextLabel.text = NSLocalizedString("TipLabel", comment: "")
+        totalTextLabel.text = NSLocalizedString("TotalLabel", comment: "")
+        billTextLabel.text = NSLocalizedString("BillLabel", comment: "")
+        settingLabel.title = NSLocalizedString("SettingLabel", comment: "")
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         billFill.becomeFirstResponder()
-        let defaults = NSUserDefaults.standardUserDefaults()
         
+        // setup for languagues
+        langSetup()
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
         if defaults.integerForKey("last_time") != 0 {
             var lastTime = defaults.integerForKey("last_time")
             var lastBill = defaults.doubleForKey("last_bill")

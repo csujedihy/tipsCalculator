@@ -6,4 +6,9 @@
   Copyright (c) 2016 c2fun. All rights reserved.
 */
 
-"CurrencySymbol" = "¥";
+"TipLabel" = "小费";
+"BillLabel" = "账单金额";
+"TotalLabel" = "总计";
+"SettingLabel" = "设置";
+"defaultTipTextLabel" = "默认小费比例";
+"darkThemeTextLabel" = "夜间主题";

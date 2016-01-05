@@ -15,6 +15,9 @@ class settingsViewCon: UIViewController {
     @IBOutlet weak var defaultTipCon: UISegmentedControl!
     @IBOutlet weak var themeCon: UISwitch!
     
+    @IBOutlet weak var defaultTipTextLabel: UILabel!
+    @IBOutlet weak var darkThemeTextLabel: UILabel!
+    
     @IBAction func onThemeChanged(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setBool(themeCon.on, forKey: "default_theme")
@@ -27,6 +30,18 @@ class settingsViewCon: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(defaultTip, forKey: "default_tip_rate")
         defaults.synchronize()
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        setupLang()
+    }
+    
+    func setupLang() {
+        defaultTipTextLabel.text = NSLocalizedString("defaultTipTextLabel", comment: "")
+        darkThemeTextLabel.text = NSLocalizedString("darkThemeTextLabel", comment: "")
+
     }
     
     

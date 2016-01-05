@@ -6,4 +6,9 @@
   Copyright (c) 2016 c2fun. All rights reserved.
 */
 
-"CurrencySymbol" = "₤";
+"TipLabel" = "Tip";
+"BillLabel" = "Bill Amount";
+"TotalLabel" = "Total";
+"SettingLabel" = "Settings";
+"defaultTipTextLabel" = "Default Tip Rate";
+"darkThemeTextLabel" = "Dark Theme";
